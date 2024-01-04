@@ -14,27 +14,28 @@ public class Exam_SelectionSort {
 //		2 번째 결과 {1, 2, 4, 5, 3}
 //		3 번째 결과 {1, 2, 3, 5, 4}
 //		4 번재 결과 {1, 2, 3, 4, 5}
-		
-		int arrs[] = {2, 5, 4, 1, 3};
+
+		int arrs[] = { 2, 5, 4, 1, 3 };
 //		int temp = arrs[0];
 //		arrs[0] = arrs[1];
 //		arrs[1] = temp;
 //		1. 최솟값을 구한 뒤 배열값 교환
 //		2. 최솟값을 구하면 배열이기 때문에 최솟값이 저장되어있는
 //		인덱스를 구해야 함
-		
+
 		int min = 0; // 최솟값을 구하는 코드
-		for (int j = 0; j < arrs.length-1; j++) {			
-			for (int i = j; i < arrs.length; i++) {			
+		for (int j = 0; j < arrs.length - 1; j++) {
+			for (int i = j; i < arrs.length; i++) {
 				if (arrs[min] > arrs[i]) {
 					min = i;
-					}
 				}
-				int temp = arrs[j];
-				arrs[j] = arrs[min];
-				arrs[min] = temp;
-			} for (int i = 0; i < arrs.length; i++) { // 정렬된 배열 출력
-				System.out.printf("%d ", arrs[i]);
-				}
+			}
+			int temp = arrs[j];
+			arrs[j] = arrs[min];
+			arrs[min] = temp;
+		}
+		for (int i = 0; i < arrs.length; i++) { // 정렬된 배열 출력
+			System.out.printf("%d ", arrs[i]);
+		}
 	}
 }

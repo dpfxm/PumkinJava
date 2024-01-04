@@ -8,20 +8,20 @@ public class Exam_TypeTrans2 {
 //		정수 / 정수 = 정수, 정수 * 정수 = 정수
 //		ex) 61 (61.00) / 2 (2.00) = 30 (30.5)
 //		강제형변환 / 자동형변환
-		
+
 		byte bNum = 127;
 		int iNum = 100;
 		int iNum2 = 10;
 		double dNum = 4.0;
-		
+
 //		자동형변환
 //		byte -> int, int-> double
 		System.out.println(bNum + iNum);
-		System.out.println(iNum2/dNum);
+		System.out.println(iNum2 / dNum);
 //		강제형변환
-		System.out.println((byte)(bNum + iNum));
-		System.out.println((int)2.9 + 1.8);
-		System.out.println((int)(2.9 + 1.8));
-		System.out.println((int)(2.9) + (int)(1.8));
+		System.out.println((byte) (bNum + iNum));
+		System.out.println((int) 2.9 + 1.8);
+		System.out.println((int) (2.9 + 1.8));
+		System.out.println((int) (2.9) + (int) (1.8));
 	}
 }

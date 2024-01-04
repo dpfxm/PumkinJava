@@ -1,4 +1,5 @@
 package org.pumkin.day05.oop;
+
 // 접근지정자(제한자)
 // 종류 : public, protected, default, private
 class Sample {

@@ -3,20 +3,20 @@ package org.pumkin.day02.condition.exercise;
 import java.util.Scanner;
 
 public class Exercise_If3 {
-	public static void main(String [] args) {
+	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		
+
 		// 100 ~ 90 : A
 		// 89 ~ 80 : B
 		// 79 ~ 70 : C
 		// 69 ~ 60 : D
 		// 60점 미만 : F
-		
+
 		System.out.print("점수를 입력해주세요 : ");
 		int score = sc.nextInt();
 		// 모델 방식
 		char grade = 0;
-		
+
 		if (score < 101) {
 			if (score >= 90)
 				grade = 'A';
@@ -30,11 +30,11 @@ public class Exercise_If3 {
 				grade = 'F';
 		} else {
 			System.out.println("0 ~ 100 사이의 수를 입력해주세요.");
-		} 
+		}
 		System.out.println("학점은 " + grade + "입니다.");
-			
+
 		// --
-		
+
 		if (score < 101) {
 			if (score >= 90)
 				// grade = 'A';
@@ -46,11 +46,11 @@ public class Exercise_If3 {
 			else if (score >= 60)
 				System.out.println("학점은 D입니다.");
 			else
-				System.out.println("학점은 F입니다.");			
+				System.out.println("학점은 F입니다.");
 		} else {
 			System.out.println("0 ~ 100 사이의 수를 입력해주세요.");
 		} // 예외처리 필수!
-		
+
 		sc.close();
 	}
 }

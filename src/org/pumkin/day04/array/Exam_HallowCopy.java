@@ -9,7 +9,7 @@ public class Exam_HallowCopy {
 		System.out.println(arrs1[0]);
 		System.out.println(arrs1[1]);
 		System.out.printf("%d\n%d\n", arrs1[2], arrs1[3]);
-		
+
 		int arrs2[] = arrs1;
 		arrs1[1] = 10;
 		arrs2[1] = 19;

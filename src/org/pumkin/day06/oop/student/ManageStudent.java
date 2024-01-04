@@ -11,8 +11,10 @@ public class ManageStudent {
 	public void printScore() {
 		for (int i = 0; i < students.length; i++) {			
 			System.out.println((i+1) + "번째 학생 정보");
-			System.out.printf("%s 학생의 점수는 1차 : %d점, 2차 : %d점입니다.\n",
-			students[i].name, students[i].firstScore, students[i].secondScore);
+			System.out.printf("%s 학생의 점수는 1차 : %d점, 2차 : %d점입니다.\n"
+					, students[i].name
+					, students[i].firstScore
+					, students[i].secondScore);
 		}
 	}
 	public void inputScore() {

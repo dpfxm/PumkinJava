@@ -3,12 +3,15 @@ package org.pumkin.day05.oop;
 class StaticSample {
 	public int num;
 	public static int input;
+
 	public void sampleMethod() {
-		
+
 	}
+
 	public void googMethod() {
-		
+
 	}
+
 	public static void originMethod() {
 		input = 2024;
 	}
