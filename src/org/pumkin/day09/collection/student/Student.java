@@ -1,6 +1,6 @@
 package org.pumkin.day09.collection.student;
 
-public class Student{
+public class Student {
 //	필드(멤버변수)
 	private String name;
 	private int firstScore;

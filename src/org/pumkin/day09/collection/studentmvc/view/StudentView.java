@@ -8,11 +8,11 @@ import org.pumkin.day09.collection.studentmvc.controller.StudentController;
 
 public class StudentView {
 	StudentController sController;
-	
+
 	public StudentView() {
 		sController = new StudentController();
 	}
-	
+
 	public void startProgram() {
 
 		end: while (true) {
@@ -69,8 +69,7 @@ public class StudentView {
 
 //	성적출력
 	public void printScore() {
-		List<Student> students 
-			= sController.allStudentList();
+		List<Student> students = sController.allStudentList();
 		System.out.println("\n===== 성적 출력 =====\n");
 		for (int i = 0; i < students.size(); i++) {
 			System.out.println("=== " + (i + 1) + "번째 학생의 성적 ===");

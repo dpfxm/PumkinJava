@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class StudentController {
 //	Student[] students = new Student[3];
 	List<Student> students;
-	
+
 	public StudentController() {
 		students = new ArrayList<Student>();
 	}
@@ -28,7 +28,7 @@ public class StudentController {
 	public void inputScore() {
 		Scanner sc = new Scanner(System.in);
 		Student student = new Student();
-		
+
 		System.out.println("\n===== 성적 입력 =====\n");
 		System.out.print("이름 : ");
 		String name = sc.next();
@@ -36,15 +36,13 @@ public class StudentController {
 		int firstScore = sc.nextInt();
 		System.out.print("두 번째 점수 : ");
 		int secondScore = sc.nextInt();
-		
+
 		student.setName(name);
 		student.setFirstScore(firstScore);
 		student.setSecondScore(secondScore);
-		
+
 		students.add(student);
-		
-		
-		
+
 //		for (int i = 0; i < students.size(); i++) {
 //			students[i] = new Student();
 //			System.out.print("이름 : ");
@@ -57,20 +55,20 @@ public class StudentController {
 //			students[i].secondScore = sc.nextInt();
 //			students[i].setSecondScore(sc.nextInt());
 //			System.out.println("");
-		}
+	}
 
 //	성적출력
 	public void printScore() {
 		System.out.println("\n===== 성적 출력 =====\n");
 		for (int i = 0; i < students.size(); i++) {
-			System.out.println("=== " + (i +1) + "번째 학생의 성적 ===");
+			System.out.println("=== " + (i + 1) + "번째 학생의 성적 ===");
 			System.out.printf("%s 학생의 첫 번째 점수는 %d점, 두 번째 점수는 %d점입니다.\n"
-			, students.get(i).getName()
-			, students.get(i).getFirstScore()
-			, students.get(i).getSecondScore());
+					, students.get(i).getName()
+					, students.get(i).getFirstScore()
+					, students.get(i).getSecondScore());
 		}
 	}
-		
+
 //		for (int i = 0; i < students.length; i++) {
 //			System.out.println("=====" + (i + 1) + "번째 학생의 정보 출력 =====");
 //			System.out.printf("%s 학생의 첫 번째 점수는 %d점, 두 번째 점수는 %d점입니다.\n"

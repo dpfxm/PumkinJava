@@ -2,8 +2,8 @@ package org.pumkin.day08.oop.polymorphism;
 
 class SuperClass {
 	void paint() {
-		draw(); 	// 동적바인딩에 의해 SuperClass의 draw()가 아닌
-					// SubClass의 draw()가 실행됨
+		draw(); 		// 동적바인딩에 의해 SuperClass의 draw()가 아닌
+						// SubClass의 draw()가 실행됨
 	}
 
 	void draw() {

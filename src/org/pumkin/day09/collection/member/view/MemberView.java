@@ -8,14 +8,13 @@ import org.pumkin.day09.collection.member.controller.MemberController;
 
 public class MemberView {
 	MemberController mController;
-	
+
 	public MemberView() {
 		mController = new MemberController();
 	}
-	
+
 	public void startProgram() {
-		finish:
-			while (true) {
+		finish: while (true) {
 			int choice = this.printMenu();
 			switch (choice) {
 			case 1:
@@ -89,14 +88,13 @@ public class MemberView {
 		String memberEmail = sc.next();
 		System.out.print("전화번호 : ");
 		String memberPhone = sc.next();
-		
-		
+
 		member.setMemberId(memberId);
 		member.setMemberPw(memberPw);
 		member.setMemberName(memberName);
 		member.setMemberEmail(memberEmail);
 		member.setMemberPhone(memberPhone);
-		
+
 		mController.addMember(member);
 		System.out.println("정보를 저장중입니다 ...\n저장 완료!");
 	}
@@ -115,12 +113,11 @@ public class MemberView {
 //		아이디를 입력해주세요 : khuser11
 //		회원 정보가 존재하지 않습니다.
 		Scanner sc = new Scanner(System.in);
-		List<Member> members
-		= mController.findMember();
+		List<Member> members = mController.findMember();
 
 		System.out.print("===== 회원 정보 수정 =====\n아이디를 입력해주세요 : ");
 		String memberId = sc.next();
-		for (int i = 0; i < members.size(); i++) {				
+		for (int i = 0; i < members.size(); i++) {
 			if (members.get(i).getMemberId().equals(memberId)) {
 				System.out.print("비밀번호 : ");
 				members.get(i).setMemberPw(sc.next());
@@ -147,11 +144,10 @@ public class MemberView {
 //		삭제할 회원의 아이디를 입력해주세요 : khuser11
 //		회원 정보가 존재하지 않습니다.
 		Scanner sc = new Scanner(System.in);
-		List<Member> members
-		= mController.findMember();
+		List<Member> members = mController.findMember();
 
 		System.out.print("===== 회원 정보 삭제 =====\n삭제할 회원의 아이디를 입력해주세요 : ");
-		for (int i = 0; i < members.size(); i++) {			
+		for (int i = 0; i < members.size(); i++) {
 			if (members.get(i).getMemberId().equals(sc.next())) {
 				mController.deleteMember(members.get(i));
 				System.out.println("정보를 삭제중입니다 ...\n삭제 완료!");
@@ -167,16 +163,15 @@ public class MemberView {
 //		아이디 : khuser01, 이름 : 일용자, 이메일 : ilyj@naver.com, 폰번호 : 01031313131
 
 		Scanner sc = new Scanner(System.in);
-		List<Member> members
-		= mController.findMember();
+		List<Member> members = mController.findMember();
 
 		System.out.print("===== 회원 정보 출력(아이디) =====\n아이디를 입력해주세요 : ");
 		String memberId = sc.next();
-		for (int i = 0; i < members.size(); i++) {	
+		for (int i = 0; i < members.size(); i++) {
 			if (members.get(i).getMemberId().equals(memberId)) {
-				System.out.println("아이디 : " + members.get(i).getMemberId()
+				System.out.println("아이디 : " + members.get(i).getMemberId() 
 						+ ", 이름 : " + members.get(i).getMemberName()
-						+ ", 이메일 : " + members.get(i).getMemberEmail()
+						+ ", 이메일 : " + members.get(i).getMemberEmail() 
 						+ ", 폰번호 : " + members.get(i).getMemberPhone());
 			} else {
 				System.out.println("회원 정보가 존재하지 않습니다.");
@@ -194,13 +189,12 @@ public class MemberView {
 //		아이디 : khuser06, 이름 : 육용자, 이메일 : khuser06@kh.com, 폰번호 : 01031313131
 //		아이디 : khuser07, 이름 : 칠용자, 이메일 : khuser07@kh.com, 폰번호 : 01031313131
 
-		List<Member> members
-		= mController.findAllMember();
+		List<Member> members = mController.findAllMember();
 		System.out.println("===== 회원 전체 정보 출력 =====");
 		for (int i = 0; i < members.size(); i++) {
-			System.out.println("아이디 : " + members.get(i).getMemberId()
+			System.out.println("아이디 : " + members.get(i).getMemberId() 
 					+ ", 이름 : " + members.get(i).getMemberName()
-					+ ", 이메일 : " + members.get(i).getMemberEmail()
+					+ ", 이메일 : " + members.get(i).getMemberEmail() 
 					+ ", 폰번호 : " + members.get(i).getMemberPhone());
 		}
 	}

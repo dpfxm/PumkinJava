@@ -28,11 +28,12 @@ public class Exam_MapCollection {
 
 		// 지역번호 입력 : 031
 		// 입력하신 지역번호에 대한 지역은 : 경기도
-		while (true) {			
+		while (true) {
 			System.out.print("지역번호 입력 : ");
 			String num = sc.next();
-			if(num.equals("exit")) break;
-			if(regionNum.get(num) == null) {
+			if (num.equals("exit"))
+				break;
+			if (regionNum.get(num) == null) {
 				System.out.println("존재하지 않는 지역입니다.");
 				continue;
 			}

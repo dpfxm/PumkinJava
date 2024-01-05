@@ -32,7 +32,8 @@ public class Exercise_List {
 			if (list.get(longIndex).length() < list.get(i).length()) {
 				longIndex = i;
 			}
-		} System.out.println("가장 긴 이름 : " + list.get(longIndex));
+		}
+		System.out.println("가장 긴 이름 : " + list.get(longIndex));
 
 //		String longest = "";
 //		for (int i = 0; i < list.size(); i++) {

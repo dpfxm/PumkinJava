@@ -20,7 +20,7 @@ public class Exam_ObjectProperty {
 //		if (javaStr == "Java") {			// 같습니다.
 //		if (javaStr == javaStr2) {			// 같습니다.
 //		if (javaStr == javaStr3) {			// 다릅니다. (주소가 다르므로 동등 비교가 되지 않는 경우, new를 씀)
-		if (javaStr.equals(javaStr3)) {		// 문자열 비교는 equals
+		if (javaStr.equals(javaStr3)) { 	// 문자열 비교는 equals
 											// equals는 Object 클래스의 메소드
 			System.out.println("같습니다.");
 		} else {

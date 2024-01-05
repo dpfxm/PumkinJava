@@ -1,9 +1,10 @@
 package org.pumkin.day10.oop.motel.model.vo;
 
 public class Room {
-	private boolean isAvailable; 
-	
-	public Room() {}
+	private boolean isAvailable;
+
+	public Room() {
+	}
 
 	public Room(boolean isAvailable) {
 		this.isAvailable = isAvailable;
@@ -12,7 +13,7 @@ public class Room {
 	public final boolean isAvailable() {
 		return isAvailable;
 	}
-	
+
 	public final void setAvailable(boolean isAvailable) {
 		this.isAvailable = isAvailable;
 	}

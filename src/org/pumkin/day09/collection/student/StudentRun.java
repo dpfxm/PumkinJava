@@ -4,8 +4,7 @@ public class StudentRun {
 	public static void main(String[] args) {
 		StudentController sController = new StudentController();
 
-		end : 
-		while (true) {
+		end: while (true) {
 			int choice = sController.printMenu();
 			switch (choice) {
 			case 1:

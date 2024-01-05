@@ -30,7 +30,7 @@ public class MemberController {
 				member.setMemberEmail(updateMember.getMemberEmail());
 				member.setMemberPhone(updateMember.getMemberPhone());
 //				수정된 데이터로 저장
-				memberList.set(i,  member);
+				memberList.set(i, member);
 			}
 		}
 	}
@@ -43,15 +43,16 @@ public class MemberController {
 				memberList.remove(i);
 				break;
 			}
-		} 
+		}
 	}
 
 	// 회원 정보 출력
 	public List<Member> printOneMember() {
 		return memberList;
 	}
+
 	public Member printOneById(String memberId) {
-		for (Member member : memberList) {	
+		for (Member member : memberList) {
 			if (memberId.equals(member.getMemberId())) {
 				return member;
 			}
