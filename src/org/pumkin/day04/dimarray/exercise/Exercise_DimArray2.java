@@ -3,7 +3,6 @@ package org.pumkin.day04.dimarray.exercise;
 public class Exercise_DimArray2 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		int arrs[][] = new int[5][5];
 		int k = 1;
 

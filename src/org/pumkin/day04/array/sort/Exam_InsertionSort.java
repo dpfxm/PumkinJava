@@ -3,7 +3,7 @@ package org.pumkin.day04.array.sort;
 public class Exam_InsertionSort {
 	public static void main(String[] args) {
 //		삽입정렬
-//		정렬 알고리즘 중에 허너, 가장 간단하고 기본이 되는 알고리즘
+//		정렬 알고리즘 중에 하나, 가장 간단하고 기본이 되는 알고리즘
 //		배열의 N번 인덱스 값을 0번에서 n~1번 인덱스까지 비교!
 //		N은 1부터 시작
 //		오름차순, 작은 수를 찾아야 함

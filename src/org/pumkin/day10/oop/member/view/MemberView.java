@@ -8,14 +8,13 @@ import org.pumkin.day10.oop.member.model.vo.Member;
 
 public class MemberView {
 	MemberController mController;
-	
+
 	public MemberView() {
 		mController = new MemberController(); // 필수!
 	}
-	
+
 	public void startProgram() {
-		finish :
-			while (true) {
+		finish: while (true) {
 			int choice = this.printMenu();
 			String memberId = "";
 //			1. 등록 -> 5. 출력 -> 4. 검색출력 -> 3. 삭제 -> 2. 수정
@@ -57,7 +56,7 @@ public class MemberView {
 			}
 		}
 	}
-	
+
 	public int printMenu() {
 		Scanner sc = new Scanner(System.in);
 		try {
@@ -92,14 +91,14 @@ public class MemberView {
 		String memberEmail = sc.next();
 		System.out.print("전화번호 : ");
 		String memberPhone = sc.next();
-		
+
 //		생성자를 만들 시 사라짐
 //		member.setMemberId(memberId);
 //		member.setMemberPw(memberPw);
 //		member.setMemberName(memberName);
 //		member.setMemberEmail(memberEmail);
 //		member.setMemberPhone(memberPhone);
-		
+
 		Member member = new Member(memberId, memberPw, memberName, memberEmail, memberPhone);
 		System.out.println("정보를 저장중입니다 ...");
 		try {
@@ -108,12 +107,12 @@ public class MemberView {
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 		}
-		System.out.println("저장 완료!");
+		System.out.println("저장 완료!\n");
 	}
 
 	public void modifyMember(String memberId) {
 		Scanner sc = new Scanner(System.in);
-		
+
 		System.out.println("===== 회원 정보 수정 =====");
 		System.out.println("수정할 정보를 입력해주세요");
 		System.out.print("비밀번호  : ");
@@ -122,7 +121,7 @@ public class MemberView {
 		String memberEmail = sc.next();
 		System.out.print("전화번호  : ");
 		String memberPhone = sc.next();
-		
+
 		Member member = new Member(memberPw, memberEmail, memberPhone);
 		System.out.println("정보를 수정중입니다 ...");
 		try {
@@ -131,12 +130,12 @@ public class MemberView {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		System.out.println("수정 완료!");
+		System.out.println("수정 완료!\n");
 	}
-	
+
 	public String inputMemberId() {
 		Scanner sc = new Scanner(System.in);
-		
+
 		System.out.print("아이디를 입력해주세요 : ");
 		String memberId = sc.next();
 		return memberId;
@@ -147,30 +146,30 @@ public class MemberView {
 		System.out.print("===== 회원 정보 출력(아이디) =====");
 		Member member = mController.printOneById(memberId);
 
-		 if(member==null) {
-	            System.out.println("\n존재하지 않는 정보입니다");
-	            return -1;
-	        } else {
-				System.out.println("\n아이디 : " + member.getMemberId()
-						+ ", 이름 : " + member.getMemberName()
-						+ ", 이메일 : " + member.getMemberEmail()
-						+ ", 폰번호 : " + member.getMemberPhone());
-				return 1;
+		if (member == null) {
+			System.out.println("\n존재하지 않는 정보입니다");
+			return -1;
+		} else {
+			System.out.println("\n아이디 : " + member.getMemberId() 
+							+ ", 이름 : " + member.getMemberName() 
+							+ ", 이메일 : " + member.getMemberEmail() 
+							+ ", 폰번호 : " + member.getMemberPhone());
+			return 1;
 		}
 	}
-	
+
 	public void printAllMembers() {
 		List<Member> members = mController.printAllMembers();
-		
+
 		System.out.println("===== 회원 전체 정보 출력 =====");
 		for (Member member : members) {
-			System.out.println("아이디 : " + member.getMemberId()
-					+ ", 이름 : " + member.getMemberName()
-					+ ", 이메일 : " + member.getMemberEmail()
-					+ ", 폰번호 : " + member.getMemberPhone());
+			System.out.println("아이디 : " + member.getMemberId() 
+							+ ", 이름 : " + member.getMemberName() 
+							+ ", 이메일 : " + member.getMemberEmail() 
+							+ ", 폰번호 : " + member.getMemberPhone());
 		}
 	}
-	
+
 	private void displayMessage(String msg) {
 		System.out.println(msg);
 	}

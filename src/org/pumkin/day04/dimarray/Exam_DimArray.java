@@ -3,7 +3,6 @@ package org.pumkin.day04.dimarray;
 public class Exam_DimArray {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		int num = 0;
 		int nums[] = new int[10];
 		int dimNums[][] = new int[2][5]; // 2개 콩콩 찍고 그 안에 다섯개를 만든다
